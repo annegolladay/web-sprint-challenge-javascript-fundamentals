@@ -29,13 +29,24 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
-2. Explain the difference between a callback and a higher order function.
+.forEach iterates through every item in an array without stopping. It does not return a new array. .map is when you are converting data. It returns a brand new array and it does not manipulate the original array. You also need a return statement.
 
-3. What is closure?
+2. Explain the difference between a callback and a higher order function. 
+
+Callback functions are functions that are passed into other functions as arguments. Higher order functions receive other functions as arguments. Callbacks are passed in and higher order functions receive.
+
+3. What is closure? 
+
+This is when a function reaches outside of its scope into the parent scope to access a variable. It gives us the ability to put functions together and to access function from a parent level scope in a child level scope even after the parent function has been terminated.
 
 4. Describe the four rules of the 'this' keyword.
 
+Four principles which will help one determine what gets 'this'. When in global scope, the value of 'this' will be the window/console object. Window Binding- When no other rules apply, 'this' defaults to the window, unless in strict mode. When in global scope, the value of 'this' will be in window/console oject. Implicit Binding- applies to objects with methods. When funciton is involed, look to left of dot, that's what 'this refers to. Explicit binding- explicitly tell JavaScript what the 'this' keyword refers to using call, apply, and bind. New Binding- when a function is invoked as a constructor function this points to the newly created object.
+
 5. Why do we need super() in an extended class?
+
+If using extend, super() needs to be called from within the constructor function. This is to pass any new attributes back up to the constructor of the parent object.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
