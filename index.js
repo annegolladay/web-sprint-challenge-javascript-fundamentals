@@ -16,7 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-//Functions can reach out and grab variables outside of their scope, but we can not reach into a function to get a variable. A  nested function has its own workspace. But it also has access to the workspaces of all functions in which it is nested.
+//Functions can reach out and grab variables outside of their scope, but we can not reach into a function to get a variable. A nested function has its own workspace. But it also has access to the workspaces of all functions in which it is nested.
 
 
 
@@ -69,6 +69,16 @@ const zooAnimals = [
   }
   console.log('Request 1:', animalNames(zooAnimals));
 
+  /*Arrow Function
+  animalNames = array => {
+    const displayNames = [];
+    array.forEach(item => {
+      const newDisplayNames = `name: ${item.animal_name}, scientific: ${item.scientific_name}`;
+      displayNames.push(newDisplayNames);
+    });
+  }
+  */
+
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
   Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
@@ -83,6 +93,13 @@ const zooAnimals = [
   }
   console.log('Request 2:', lowerCaseNames(zooAnimals));
   
+/*Arrow Function
+lowerCaseNames = array => {
+  const newArray = array.map(item => item.animal_name.toLowerCase());
+    return newArray;
+}
+*/
+
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
@@ -95,6 +112,13 @@ const zooAnimals = [
     return newArray;
   }
   console.log('Request 3:', lowPopulationAnimals(zooAnimals));
+
+/* Arrow Function
+  lowPopulationAnimals = array => {
+  const newArray = array.filter(item => item.population < 5);
+    return newArray;
+}
+*/
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -110,6 +134,14 @@ const zooAnimals = [
   }
   console.log('Request 4:', USApop(zooAnimals));
   
+/* Arrow Function
+USApop = array => {
+  const totalPopulation = array.reduce((acc, item) => {
+    return acc + item.population;
+  }, 0);
+  return totalPopulation;
+}
+*/
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
@@ -123,7 +155,11 @@ const zooAnimals = [
     return cb(a, b);
   }
   console.log('Step 1:', consume(1, 2, add));
-  
+
+  /* Arrow Function
+  const consume = (a, b, cb) => (a, b);
+  */
+
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
@@ -131,11 +167,19 @@ function add(num1, num2, consumeCB) {
     return num1 + num2;
   }
 
+  /* Arrow Function
+const add = (num1, num2, consumeCB) => num1 + num2;
+*/
+
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
 function multiply(num1, num2, consumeCB) {
     return num1 * num2;
   }
+
+/* Arrow Function
+const multiply = (num1, num2, consumeCB) => num1 * num2;
+*/
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
@@ -143,6 +187,10 @@ function greeting(firstName, lastName, consumeCB) {
     return `Hello ${firstName} ${lastName}, nice to meet you!`;
   }
   
+/* Arrow Function
+const greeting = (firstName, lastName, consumeCB) => `Hello ${firstName} ${lastName}, nice to meet you!`;
+*/
+
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
   console.log(consume(2, 2, add)); // 4
