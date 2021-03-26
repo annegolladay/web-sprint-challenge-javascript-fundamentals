@@ -31,13 +31,13 @@ Edit this document to include your answers after each question. Make sure to lea
 .forEach iterates through every item in an array without stopping. It does not return a new array. .map is when you are converting data. It returns a brand new array and it does not manipulate the original array. You also need a return statement.
 
 2. Explain the difference between a callback and a higher order function.
-Callback functions are functions that are passed into other functions as arguments. Higher order functions receive other functions as arguments. Callbacks are passed in and higher order functions receive.
+Callback functions are functions that are passed into higher order functions as arguments. Higher order functions receive callback functions as arguments. Callbacks are passed in and higher order functions receive.
 
 3. What is closure?
-This is when a function reaches outside of its scope into the parent scope to access a variable. It gives us the ability to put functions together and to access function from a parent level scope in a child level scope even after the parent function has been terminated.
+This is when a function reaches outside of it's scope to grab a value that was defined in the parent scope. We can pass things down but not back up. Closures give us the ability to put functions together (think of nesting). When a function is created in another function, then we have a parent function and child function.
 
 4. Describe the four rules of the 'this' keyword.
-Four principles which will help one determine what gets 'this'. When in global scope, the value of 'this' will be the window/console object. Window Binding- When no other rules apply, 'this' defaults to the window, unless in strict mode. When in global scope, the value of 'this' will be in window/console oject. Implicit Binding- applies to objects with methods. When funciton is involed, look to left of dot, that's what 'this refers to. Explicit binding- explicitly tell JavaScript what the 'this' keyword refers to using call, apply, and bind. New Binding- when a function is invoked as a constructor function this points to the newly created object.
+Four principles which will help one determine what gets 'this'. When in global scope, the value of 'this' will be the window/console object. Window Binding- When no other rules apply, 'this' defaults to the window, unless in strict mode. When in global scope, the value of 'this' will be in window/console oject. Implicit Binding- applies to objects with methods. When funciton is involed, look to left of dot, that's what 'this' refers to. Explicit binding- explicitly tell JavaScript what the 'this' keyword refers to using call, apply, and bind. New Binding- when a function is invoked as a constructor function this points to the newly created object.
 
 5. Why do we need super() in an extended class?
 If using extend, super() needs to be called from within the constructor function. This is to pass any new attributes back up to the constructor of the parent object.
@@ -65,17 +65,17 @@ Your finished project must include all of the following requirements
 #### Task A: Closure
 
 This challenge takes a look at closures as well as scope. 
-* [ ] Find this challenge in the index.js file. Read the instructions carefully!
+* [x] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task B: Objects and Arrays
 
 Test your knowledge of advanced array methods and callbacks.
-* [ ] Find this challenge in the index.js file. Read the instructions carefully!
+* [x] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task C: Prototypes
 
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
-* [ ] Find this challenge in the index.js file. Read the instructions carefully!
+* [x] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task D: Classes
 
